@@ -1,0 +1,183 @@
+<section id="ff-hero" class="ff-hero-section">
+  {% if section.settings.background_image != blank %}
+    <div class="ff-hero__background">
+      {{
+        section.settings.background_image
+        | image_url: width: 1920
+        | image_tag: loading: 'lazy', widths: '768, 1200, 1600, 1920', alt: section.settings.headline
+      }}
+    </div>
+  {% endif %}
+
+  <div class="ff-hero__overlay"></div>
+
+  <div class="ff-hero__content ff-reveal">
+    <span class="ff-hero__label">— NOUVELLE COLLECTION —</span>
+    <h1 class="ff-hero__title">{{ section.settings.headline }}</h1>
+    <p class="ff-hero__subtitle">{{ section.settings.subtitle }}</p>
+
+    <div class="ff-hero__ctas">
+      <a class="ff-hero__button ff-hero__button--primary" href="/collections/all">VOIR LE DROP</a>
+      <a class="ff-hero__button ff-hero__button--secondary" href="/collections/tenue-1">LES TENUES</a>
+    </div>
+  </div>
+
+  <div class="ff-hero__fomo ff-glow-pulse">
+    🔥 <span id="ff-watchers">23 personnes regardent ce drop</span>
+  </div>
+</section>
+
+<style>
+  #ff-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #080808;
+    overflow: hidden;
+  }
+
+  #ff-hero .ff-hero__background,
+  #ff-hero .ff-hero__background img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #ff-hero .ff-hero__background img {
+    object-fit: cover;
+  }
+
+  #ff-hero .ff-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: #080808;
+    opacity: 0.85;
+    z-index: 1;
+  }
+
+  #ff-hero .ff-hero__content {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    padding: 0 20px;
+  }
+
+  #ff-hero .ff-hero__label {
+    display: block;
+    margin-bottom: 24px;
+    color: #7c3aed;
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+  }
+
+  #ff-hero .ff-hero__title {
+    margin-bottom: 16px;
+    color: #f8f8f8;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-weight: 800;
+    line-height: 1.05;
+  }
+
+  #ff-hero .ff-hero__subtitle {
+    margin: 0 auto 40px auto;
+    max-width: 500px;
+    color: #9ca3af;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  #ff-hero .ff-hero__ctas {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #ff-hero .ff-hero__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    border-radius: 2px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+  }
+
+  #ff-hero .ff-hero__button--primary {
+    background: #7c3aed;
+    color: #ffffff;
+  }
+
+  #ff-hero .ff-hero__button--primary:hover,
+  #ff-hero .ff-hero__button--primary:focus-visible {
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
+  }
+
+  #ff-hero .ff-hero__button--secondary {
+    background: transparent;
+    border: 1px solid #7c3aed;
+    color: #7c3aed;
+  }
+
+  #ff-hero .ff-hero__fomo {
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    z-index: 2;
+    padding: 10px 16px;
+    border: 1px solid #7c3aed;
+    border-radius: 4px;
+    background: #111111;
+    color: #f8f8f8;
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 767px) {
+    #ff-hero .ff-hero__fomo {
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "FF Hero",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Image de fond"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Titre principal",
+      "default": "PORTE CE QUE TU SERAS."
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Sous-titre",
+      "default": "Streetwear Y2K. Éditions limitées. Pour ceux qui construisent leur futur."
+    }
+  ],
+  "presets": [
+    {
+      "name": "FF Hero"
+    }
+  ]
+}
+{% endschema %}
