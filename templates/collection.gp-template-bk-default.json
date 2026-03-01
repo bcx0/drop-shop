@@ -1,0 +1,106 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "order": [
+    "banner",
+    "product-grid",
+    "page_g3bPUb",
+    "page_GBcAYc",
+    "image_with_text_hwXnLX"
+  ],
+  "sections": {
+    "banner": {
+      "settings": {
+        "color_scheme": "scheme-1",
+        "show_collection_description": true,
+        "show_collection_image": false
+      },
+      "type": "main-collection-banner"
+    },
+    "image_with_text_hwXnLX": {
+      "block_order": [
+        "text_zL4hb6",
+        "heading_YRGwTx"
+      ],
+      "blocks": {
+        "heading_YRGwTx": {
+          "settings": {
+            "heading": "Réalise ton rêve !",
+            "heading_size": "h1"
+          },
+          "type": "heading"
+        },
+        "text_zL4hb6": {
+          "settings": {
+            "text": "<p>Tu as toujours rêvé de créer ta propre marque de vêtements, mais tu ne sais pas par où commencer ? Ne laisse pas tes idées rester au stade de projet ! Mon guide complet t’accompagne pas à pas pour créer ta marque, gérer tes réseaux sociaux et maîtriser ton marketing.</p><p>✔️ Construis une marque forte avec une identité unique</p><p>✔️ Apprends à gérer tes réseaux sociaux pour attirer et fidéliser ta communauté</p><p>✔️ Mets en place des stratégies marketing efficaces pour vendre tes créations</p><p><br/></p><p>Que tu sois débutant ou que tu veuilles passer au niveau supérieur, ce guide te donne toutes les clés pour réussir. Ton rêve est à portée de main, il ne manque plus que toi pour le réaliser !</p><p><br/></p><p>Prends ton avenir en main et lance-toi dès aujourd’hui !</p>",
+            "text_style": "body"
+          },
+          "type": "text"
+        }
+      },
+      "settings": {
+        "color_scheme": "",
+        "content_layout": "no-overlap",
+        "desktop_content_alignment": "left",
+        "desktop_content_position": "top",
+        "desktop_image_width": "medium",
+        "height": "adapt",
+        "image": "shopify://shop_images/IMG_9860.jpg",
+        "image_behavior": "none",
+        "layout": "image_first",
+        "mobile_content_alignment": "left",
+        "padding_bottom": 36,
+        "padding_top": 36,
+        "section_color_scheme": ""
+      },
+      "type": "image-with-text"
+    },
+    "page_GBcAYc": {
+      "settings": {
+        "color_scheme": "",
+        "heading_size": "h1",
+        "padding_bottom": 36,
+        "padding_top": 36,
+        "page": "questionnement"
+      },
+      "type": "page"
+    },
+    "page_g3bPUb": {
+      "settings": {
+        "color_scheme": "",
+        "heading_size": "h1",
+        "padding_bottom": 36,
+        "padding_top": 36,
+        "page": "guide-des-tailles"
+      },
+      "type": "page"
+    },
+    "product-grid": {
+      "settings": {
+        "color_scheme": "scheme-1",
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "filter_type": "horizontal",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "padding_bottom": 36,
+        "padding_top": 36,
+        "products_per_page": 16,
+        "quick_add": "none",
+        "show_rating": false,
+        "show_secondary_image": false,
+        "show_vendor": false
+      },
+      "type": "main-collection-product-grid"
+    }
+  }
+}
