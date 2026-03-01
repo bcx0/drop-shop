@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@700;800&family=Space+Mono&display=swap');
+
+:root {
+  --bg-primary: #080808;
+  --bg-secondary: #111111;
+  --bg-elevated: #1a1a1a;
+  --accent-primary: #7c3aed;
+  --accent-secondary: #06b6d4;
+  --accent-glow: #a855f7;
+  --text-primary: #f8f8f8;
+  --text-secondary: #9ca3af;
+  --text-muted: #4b5563;
+  --border: #222222;
+  --danger: #ef4444;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.header-wrapper,
+.shopify-section-header-sticky,
+.section-header,
+header {
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border);
+}
+
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.btn-primary,
+button.btn-primary,
+a.btn-primary {
+  background: var(--accent-primary);
+  border: 1px solid var(--accent-primary);
+  border-radius: 2px;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 16px 32px;
+  text-transform: uppercase;
+  transition: box-shadow 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible,
+button.btn-primary:hover,
+button.btn-primary:focus-visible,
+a.btn-primary:hover,
+a.btn-primary:focus-visible {
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
+}
+
+.btn-secondary,
+button.btn-secondary,
+a.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--accent-primary);
+  border-radius: 2px;
+  color: var(--accent-primary);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 16px 32px;
+  text-transform: uppercase;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible,
+button.btn-secondary:hover,
+button.btn-secondary:focus-visible,
+a.btn-secondary:hover,
+a.btn-secondary:focus-visible {
+  background: var(--accent-primary);
+  color: #ffffff;
+}
+
+.card__inner,
+.card-wrapper {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.card__inner:hover,
+.card__inner:focus-within,
+.card-wrapper:hover,
+.card-wrapper:focus-within {
+  border-color: var(--accent-primary);
+  transform: translateY(-4px);
+}
+
+.announcement-bar,
+.announcement-bar__message {
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--accent-primary);
+  color: var(--text-primary);
+}
+
+.ff-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.ff-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 5px var(--accent-primary);
+  }
+
+  50% {
+    box-shadow: 0 0 20px var(--accent-primary), 0 0 40px var(--accent-glow);
+  }
+}
+
+.ff-glow-pulse {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+.ff-sticky-atc {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--accent-primary);
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+  position: fixed;
+  right: 0;
+  z-index: 999;
+}
+
+@media screen and (min-width: 768px) {
+  .ff-sticky-atc {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ff-sticky-atc {
+    display: block;
+  }
+}
+
+.footer,
+.footer:not(.color-scheme-1) {
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.footer .copyright__content a,
+.footer .footer__content-bottom,
+.footer .footer__content-top,
+.footer .footer-block,
+.footer .footer-block__details-content,
+.footer .list-social__link {
+  color: var(--text-muted);
+}
+
+.footer__content-bottom .copyright__content:last-child,
+.footer .copyright__content:has(a[href*='shopify']) {
+  display: none;
+}
