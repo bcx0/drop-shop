@@ -310,7 +310,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800&family=Inter:wght@400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
   {{ 'futur-flare.css' | asset_url | stylesheet_tag }}
-  </head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800&family=Inter:wght@400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+{{ 'futur-flare.css' | asset_url | stylesheet_tag }}
+</head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
@@ -387,5 +391,6 @@
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     {{ 'futur-flare.js' | asset_url | script_tag }}
-  </body>
+{{ 'futur-flare.js' | asset_url | script_tag }}
+</body>
 </html>
