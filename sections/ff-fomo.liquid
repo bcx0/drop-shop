@@ -1,73 +1,101 @@
 <section class="ff-fomo ff-reveal" style="
-  background: #111111;
-  border-top: 1px solid #222222;
-  border-bottom: 1px solid #222222;
-  padding: 48px 20px;
+  background: #0a0a0a;
+  border-top: 1px solid #1f1f1f;
+  border-bottom: 1px solid #1f1f1f;
+  padding: 64px 20px;
+  position: relative;
+  overflow: hidden;
 ">
-  <div style="max-width: 900px; margin: 0 auto;">
+  <div style="
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #7C3AED, #06B6D4, transparent);
+  "></div>
+
+  <div style="max-width: 1000px; margin: 0 auto;">
 
     <p style="
       font-family: 'Space Mono', monospace;
-      font-size: 11px;
+      font-size: 10px;
       color: #7C3AED;
       text-transform: uppercase;
-      letter-spacing: 0.3em;
+      letter-spacing: 0.4em;
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 48px;
     ">— DROP EN COURS —</p>
 
-    <div class="ff-fomo__stats" style="
-      display: flex;
-      justify-content: center;
-      gap: 48px;
-      flex-wrap: wrap;
-      margin-bottom: 40px;
+    <div style="
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 48px;
     ">
-      <div style="text-align: center;">
-        <p style="font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; font-weight: 800; color: #F8F8F8; margin: 0;">1 247</p>
-        <p style="font-family: 'Inter', sans-serif; font-size: 13px; color: #9CA3AF; margin: 8px 0 0 0; text-transform: uppercase; letter-spacing: 0.1em;">Commandes expédiées</p>
+      <div style="text-align: center; padding: 32px 20px; background: #111111; border: 1px solid #1f1f1f; border-radius: 4px;">
+        <p style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; color: #F8F8F8; margin: 0; line-height: 1;">1 247</p>
+        <p style="font-family: 'Space Mono', monospace; font-size: 10px; color: #9CA3AF; margin: 12px 0 0 0; text-transform: uppercase; letter-spacing: 0.2em;">Commandes expédiées</p>
       </div>
-      <div style="text-align: center;">
-        <p style="font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; font-weight: 800; color: #F8F8F8; margin: 0;">4.8 ⭐</p>
-        <p style="font-family: 'Inter', sans-serif; font-size: 13px; color: #9CA3AF; margin: 8px 0 0 0; text-transform: uppercase; letter-spacing: 0.1em;">Note moyenne</p>
+      <div style="text-align: center; padding: 32px 20px; background: #111111; border: 1px solid #7C3AED; border-radius: 4px; box-shadow: 0 0 20px rgba(124,58,237,0.15);">
+        <p style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; color: #F8F8F8; margin: 0; line-height: 1;">4.8 ⭐</p>
+        <p style="font-family: 'Space Mono', monospace; font-size: 10px; color: #9CA3AF; margin: 12px 0 0 0; text-transform: uppercase; letter-spacing: 0.2em;">Note moyenne</p>
       </div>
-      <div style="text-align: center;">
-        <p style="font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; font-weight: 800; color: #EF4444; margin: 0;">FAIBLE</p>
-        <p style="font-family: 'Inter', sans-serif; font-size: 13px; color: #9CA3AF; margin: 8px 0 0 0; text-transform: uppercase; letter-spacing: 0.1em;">Stock restant</p>
+      <div style="text-align: center; padding: 32px 20px; background: #111111; border: 1px solid #EF4444; border-radius: 4px; box-shadow: 0 0 20px rgba(239,68,68,0.1);">
+        <p style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; color: #EF4444; margin: 0; line-height: 1;">FAIBLE</p>
+        <p style="font-family: 'Space Mono', monospace; font-size: 10px; color: #9CA3AF; margin: 12px 0 0 0; text-transform: uppercase; letter-spacing: 0.2em;">Stock restant</p>
       </div>
     </div>
 
     <div style="
-      background: #1a1a1a;
+      background: #111111;
       border: 1px solid #7C3AED;
       border-radius: 4px;
-      padding: 20px 32px;
+      padding: 24px 40px;
       text-align: center;
-      max-width: 600px;
+      max-width: 700px;
       margin: 0 auto;
-    " class="ff-glow-pulse">
+      position: relative;
+      overflow: hidden;
+    ">
+      <div style="
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #7C3AED, #06B6D4, #7C3AED);
+        animation: shimmer 3s ease infinite;
+        background-size: 200% 100%;
+      "></div>
       <p style="
         font-family: 'Space Grotesk', sans-serif;
-        font-size: 1rem;
+        font-size: clamp(0.9rem, 2vw, 1.1rem);
         color: #F8F8F8;
         margin: 0;
         font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: 0.05em;
-      ">⚡ Chaque pièce est produite en quantité limitée. Pas de restocks.</p>
+        letter-spacing: 0.08em;
+      ">⚡ Chaque pièce est produite en quantité limitée.<br><span style="color: #9CA3AF; font-weight: 400; text-transform: none; font-family: 'Inter', sans-serif; font-size: 0.9rem; letter-spacing: 0;">Pas de restocks. Pas d'exceptions.</span></p>
     </div>
 
   </div>
+
+  <style>
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+  </style>
+
+  <div style="
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #06B6D4, #7C3AED, transparent);
+  "></div>
 </section>
 
 {% schema %}
 {
   "name": "FF FOMO Bar",
   "settings": [],
-  "presets": [
-    {
-      "name": "FF FOMO Bar"
-    }
-  ]
+  "presets": [{ "name": "FF FOMO Bar" }]
 }
 {% endschema %}

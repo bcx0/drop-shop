@@ -1,108 +1,108 @@
 <section class="ff-why ff-reveal" style="
   background: #080808;
-  padding: 80px 20px;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
 ">
-  <div style="max-width: 900px; margin: 0 auto;">
+  <div style="
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(124,58,237,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  "></div>
 
-    <p style="
-      font-family: 'Space Mono', monospace;
-      font-size: 11px;
-      color: #7C3AED;
-      text-transform: uppercase;
-      letter-spacing: 0.3em;
-      text-align: center;
-      margin-bottom: 16px;
-    ">— L'IDENTITÉ —</p>
+  <div style="max-width: 1100px; margin: 0 auto; position: relative; z-index: 1;">
 
-    <h2 style="
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.8rem, 5vw, 3rem);
-      font-weight: 800;
-      color: #F8F8F8;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 64px;
-    ">CE QU'ON EST.<br>CE QU'ON N'EST PAS.</h2>
+    <div style="text-align: center; margin-bottom: 80px;">
+      <p style="
+        font-family: 'Space Mono', monospace;
+        font-size: 10px;
+        color: #7C3AED;
+        text-transform: uppercase;
+        letter-spacing: 0.4em;
+        margin-bottom: 20px;
+      ">— L'IDENTITÉ —</p>
+      <h2 style="
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: clamp(2rem, 6vw, 4rem);
+        font-weight: 800;
+        color: #F8F8F8;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        margin: 0;
+        line-height: 1.1;
+      ">CE QU'ON EST.<br><span style="color: #7C3AED;">CE QU'ON N'EST PAS.</span></h2>
+    </div>
 
     <div style="
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     ">
+      {% assign items = "⚡,Sélection exigeante,Pièces choisies pour leur esthétique. On ne vend pas tout — uniquement ce qui mérite d'être porté.|🔒,Stock contrôlé,Pas de surproduction. Quand c'est parti c'est parti. La rareté est volontaire et assumée.|📦,Expédié sous 48h,Suivi en temps réel inclus. Ton colis part vite et tu sais où il est à tout moment.|💳,Zéro risque,Paiement sécurisé. Retours sans prise de tête sous 30 jours. On assume.|🎯,Pour ceux qui refusent le mainstream,Futur Flare c'est un état d'esprit. Pas juste des fringues. Tu portes ce que tu veux devenir." | split: "|" %}
 
-      <div style="
-        background: #111111;
-        border: 1px solid #222222;
-        border-radius: 4px;
-        padding: 32px;
-        transition: border-color 0.3s ease;
-      " onmouseover="this.style.borderColor='#7C3AED'" onmouseout="this.style.borderColor='#222222'">
-        <p style="font-size: 1.5rem; margin-bottom: 16px;">⚡</p>
-        <p style="font-family: 'Space Grotesk', sans-serif; font-size: 1rem; font-weight: 700; color: #F8F8F8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Sélection exigeante</p>
-        <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: #9CA3AF; line-height: 1.6; margin: 0;">Pièces choisies pour leur esthétique, pas leur volume. On ne vend pas tout.</p>
-      </div>
-
-      <div style="
-        background: #111111;
-        border: 1px solid #222222;
-        border-radius: 4px;
-        padding: 32px;
-        transition: border-color 0.3s ease;
-      " onmouseover="this.style.borderColor='#7C3AED'" onmouseout="this.style.borderColor='#222222'">
-        <p style="font-size: 1.5rem; margin-bottom: 16px;">🔒</p>
-        <p style="font-family: 'Space Grotesk', sans-serif; font-size: 1rem; font-weight: 700; color: #F8F8F8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Stock contrôlé</p>
-        <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: #9CA3AF; line-height: 1.6; margin: 0;">Pas de surproduction. Quand c'est parti, c'est parti. C'est voulu.</p>
-      </div>
-
-      <div style="
-        background: #111111;
-        border: 1px solid #222222;
-        border-radius: 4px;
-        padding: 32px;
-        transition: border-color 0.3s ease;
-      " onmouseover="this.style.borderColor='#7C3AED'" onmouseout="this.style.borderColor='#222222'">
-        <p style="font-size: 1.5rem; margin-bottom: 16px;">📦</p>
-        <p style="font-family: 'Space Grotesk', sans-serif; font-size: 1rem; font-weight: 700; color: #F8F8F8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Expédié sous 48h</p>
-        <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: #9CA3AF; line-height: 1.6; margin: 0;">Suivi en temps réel. Livraison rapide, emballage soigné.</p>
-      </div>
-
-      <div style="
-        background: #111111;
-        border: 1px solid #222222;
-        border-radius: 4px;
-        padding: 32px;
-        transition: border-color 0.3s ease;
-      " onmouseover="this.style.borderColor='#7C3AED'" onmouseout="this.style.borderColor='#222222'">
-        <p style="font-size: 1.5rem; margin-bottom: 16px;">💳</p>
-        <p style="font-family: 'Space Grotesk', sans-serif; font-size: 1rem; font-weight: 700; color: #F8F8F8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Paiement sécurisé</p>
-        <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: #9CA3AF; line-height: 1.6; margin: 0;">Retours sans prise de tête sous 30 jours. Zéro risque.</p>
-      </div>
-
-      <div style="
-        background: #111111;
-        border: 1px solid #222222;
-        border-radius: 4px;
-        padding: 32px;
-        transition: border-color 0.3s ease;
-      " onmouseover="this.style.borderColor='#7C3AED'" onmouseout="this.style.borderColor='#222222'">
-        <p style="font-size: 1.5rem; margin-bottom: 16px;">🎯</p>
-        <p style="font-family: 'Space Grotesk', sans-serif; font-size: 1rem; font-weight: 700; color: #F8F8F8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">Pour ceux qui refusent le mainstream</p>
-        <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: #9CA3AF; line-height: 1.6; margin: 0;">Futur Flare c'est un état d'esprit. Pas juste des fringues.</p>
-      </div>
-
+      {% for item in items %}
+        {% assign parts = item | split: "," %}
+        <div class="ff-why-card" style="
+          background: #0f0f0f;
+          border: 1px solid #1f1f1f;
+          border-radius: 4px;
+          padding: 36px 32px;
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+        ">
+          <div style="
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #7C3AED, #06B6D4);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          " class="ff-card-line"></div>
+          <p style="font-size: 2rem; margin-bottom: 20px;">{{ parts[0] }}</p>
+          <p style="
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: #F8F8F8;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+          ">{{ parts[1] }}</p>
+          <p style="
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #6B7280;
+            line-height: 1.7;
+            margin: 0;
+          ">{{ parts[2] }}</p>
+        </div>
+      {% endfor %}
     </div>
+
   </div>
 </section>
+
+<style>
+  .ff-why-card:hover {
+    border-color: #7C3AED !important;
+    transform: translateY(-4px);
+    box-shadow: 0 0 30px rgba(124,58,237,0.15);
+  }
+  .ff-why-card:hover .ff-card-line {
+    opacity: 1 !important;
+  }
+</style>
 
 {% schema %}
 {
   "name": "FF Why Section",
   "settings": [],
-  "presets": [
-    {
-      "name": "FF Why Section"
-    }
-  ]
+  "presets": [{ "name": "FF Why Section" }]
 }
 {% endschema %}

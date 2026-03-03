@@ -1,121 +1,112 @@
 <section class="ff-tiktok ff-reveal" style="
-  background: #111111;
-  padding: 80px 20px;
-  border-top: 1px solid #222222;
+  background: #0a0a0a;
+  padding: 100px 20px;
+  border-top: 1px solid #1f1f1f;
+  position: relative;
+  overflow: hidden;
 ">
-  <div style="max-width: 1000px; margin: 0 auto;">
+  <div style="max-width: 1100px; margin: 0 auto;">
 
-    <p style="
-      font-family: 'Space Mono', monospace;
-      font-size: 11px;
-      color: #7C3AED;
-      text-transform: uppercase;
-      letter-spacing: 0.3em;
-      text-align: center;
-      margin-bottom: 16px;
-    ">— LA COMMUNAUTÉ —</p>
-
-    <h2 style="
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.8rem, 5vw, 3rem);
-      font-weight: 800;
-      color: #F8F8F8;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 16px;
-    ">LA COMMUNAUTÉ PORTE FUTUR FLARE</h2>
-
-    <p style="
-      font-family: 'Inter', sans-serif;
-      font-size: 15px;
-      color: #9CA3AF;
-      text-align: center;
-      margin-bottom: 48px;
-    ">Ils ont osé. À ton tour.</p>
+    <div style="text-align: center; margin-bottom: 64px;">
+      <p style="
+        font-family: 'Space Mono', monospace;
+        font-size: 10px;
+        color: #06B6D4;
+        text-transform: uppercase;
+        letter-spacing: 0.4em;
+        margin-bottom: 20px;
+      ">— LA COMMUNAUTÉ —</p>
+      <h2 style="
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: clamp(2rem, 6vw, 4rem);
+        font-weight: 800;
+        color: #F8F8F8;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        margin-bottom: 16px;
+        line-height: 1.1;
+      ">ILS PORTENT<br><span style="color: #06B6D4;">FUTUR FLARE</span></h2>
+      <p style="
+        font-family: 'Inter', sans-serif;
+        font-size: 15px;
+        color: #6B7280;
+        margin: 0;
+      ">Ils ont osé construire leur futur. À ton tour.</p>
+    </div>
 
     <div style="
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 16px;
-      margin-bottom: 48px;
+      margin-bottom: 56px;
     ">
-
+      {% for i in (1..3) %}
       <div style="
-        background: #1a1a1a;
-        border: 1px solid #222222;
+        background: #111111;
+        border: 1px solid #1f1f1f;
         border-radius: 4px;
         aspect-ratio: 9/16;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         overflow: hidden;
         position: relative;
-      ">
+        transition: border-color 0.3s ease;
+        cursor: pointer;
+      " onmouseover="this.style.borderColor='#06B6D4'" onmouseout="this.style.borderColor='#1f1f1f'">
+        <div style="
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(to bottom, transparent 50%, rgba(8,8,8,0.9) 100%);
+          z-index: 1;
+        "></div>
         <p style="
           font-family: 'Space Mono', monospace;
-          font-size: 11px;
+          font-size: 10px;
           color: #4B5563;
           text-align: center;
           padding: 20px;
-        ">AJOUTE TON<br>TIKTOK ICI<br><br>Embed via<br>TikTok oEmbed</p>
+          z-index: 2;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+        ">Ajoute ta vidéo<br>TikTok ici</p>
+        <div style="
+          position: absolute;
+          bottom: 16px;
+          left: 16px;
+          z-index: 2;
+        ">
+          <p style="
+            font-family: 'Space Mono', monospace;
+            font-size: 9px;
+            color: #06B6D4;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin: 0;
+          ">@futurflare</p>
+        </div>
       </div>
-
-      <div style="
-        background: #1a1a1a;
-        border: 1px solid #222222;
-        border-radius: 4px;
-        aspect-ratio: 9/16;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-      ">
-        <p style="
-          font-family: 'Space Mono', monospace;
-          font-size: 11px;
-          color: #4B5563;
-          text-align: center;
-          padding: 20px;
-        ">AJOUTE TON<br>TIKTOK ICI<br><br>Embed via<br>TikTok oEmbed</p>
-      </div>
-
-      <div style="
-        background: #1a1a1a;
-        border: 1px solid #222222;
-        border-radius: 4px;
-        aspect-ratio: 9/16;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-      ">
-        <p style="
-          font-family: 'Space Mono', monospace;
-          font-size: 11px;
-          color: #4B5563;
-          text-align: center;
-          padding: 20px;
-        ">AJOUTE TON<br>TIKTOK ICI<br><br>Embed via<br>TikTok oEmbed</p>
-      </div>
-
+      {% endfor %}
     </div>
 
     <div style="text-align: center;">
       <a href="https://www.tiktok.com/@futurflare" target="_blank" style="
         font-family: 'Space Grotesk', sans-serif;
-        font-size: 14px;
-        font-weight: 700;
-        color: #7C3AED;
+        font-size: 13px;
+        font-weight: 800;
+        color: #06B6D4;
         text-transform: uppercase;
-        letter-spacing: 0.1em;
-        border: 1px solid #7C3AED;
-        padding: 14px 32px;
+        letter-spacing: 0.15em;
+        border: 1px solid #06B6D4;
+        padding: 16px 40px;
         border-radius: 2px;
         text-decoration: none;
         display: inline-block;
-        transition: all 0.2s ease;
-      ">NOUS SUIVRE SUR TIKTOK</a>
+        transition: all 0.3s ease;
+      " onmouseover="this.style.background='#06B6D4';this.style.color='#080808'" onmouseout="this.style.background='transparent';this.style.color='#06B6D4'">
+        NOUS SUIVRE SUR TIKTOK ↗
+      </a>
     </div>
 
   </div>
@@ -125,10 +116,6 @@
 {
   "name": "FF TikTok UGC",
   "settings": [],
-  "presets": [
-    {
-      "name": "FF TikTok UGC"
-    }
-  ]
+  "presets": [{ "name": "FF TikTok UGC" }]
 }
 {% endschema %}
