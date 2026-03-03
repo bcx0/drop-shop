@@ -1,48 +1,47 @@
-<div class="ff-announcement-bar" style="
+<style>
+.ff-bar-track {
+  display: flex;
+  gap: 80px;
+  white-space: nowrap;
+  width: max-content;
+  animation: ffBar 80s linear infinite;
+}
+.ff-bar-track span {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: #F8F8F8;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 0 20px;
+}
+@keyframes ffBar {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.ff-bar-wrap:hover .ff-bar-track {
+  animation-play-state: paused;
+}
+</style>
+
+<div class="ff-bar-wrap" style="
   background: #080808;
   border-bottom: 1px solid #7C3AED;
   overflow: hidden;
   padding: 10px 0;
-  position: relative;
-  z-index: 100;
 ">
-  <div id="ff-announcement-track" style="
-    display: flex;
-    gap: 80px;
-    white-space: nowrap;
-    width: max-content;
-    animation: ffScroll 70s linear infinite;
-  ">
+  <div class="ff-bar-track">
     <span>⚡ DROP LIMITÉ — STOCKS CRITIQUES</span>
-    <span>📦 Expédition sous 48h — Suivi en temps réel</span>
-    <span>🔄 Retours gratuits sous 30 jours</span>
-    <span>🔒 Paiement 100% sécurisé</span>
-    <span>🔥 +1200 commandes expédiées</span>
+    <span>📦 EXPÉDITION SOUS 48H — SUIVI EN TEMPS RÉEL</span>
+    <span>🔄 RETOURS GRATUITS SOUS 30 JOURS</span>
+    <span>🔒 PAIEMENT 100% SÉCURISÉ</span>
+    <span>🔥 +1200 COMMANDES EXPÉDIÉES</span>
     <span>⚡ DROP LIMITÉ — STOCKS CRITIQUES</span>
-    <span>📦 Expédition sous 48h — Suivi en temps réel</span>
-    <span>🔄 Retours gratuits sous 30 jours</span>
-    <span>🔒 Paiement 100% sécurisé</span>
-    <span>🔥 +1200 commandes expédiées</span>
+    <span>📦 EXPÉDITION SOUS 48H — SUIVI EN TEMPS RÉEL</span>
+    <span>🔄 RETOURS GRATUITS SOUS 30 JOURS</span>
+    <span>🔒 PAIEMENT 100% SÉCURISÉ</span>
+    <span>🔥 +1200 COMMANDES EXPÉDIÉES</span>
   </div>
 </div>
-
-<style>
-  .ff-announcement-bar span {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    color: #F8F8F8;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    padding: 0 16px;
-  }
-  @keyframes ffScroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  .ff-announcement-bar:hover #ff-announcement-track {
-    animation-play-state: paused;
-  }
-</style>
 
 {% schema %}
 {
