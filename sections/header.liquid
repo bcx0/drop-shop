@@ -1,3 +1,50 @@
+<style>
+.header__menu-item span,
+.header__menu-item {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
+  color: #F8F8F8 !important;
+  white-space: nowrap !important;
+}
+
+.header__inline-menu .list-menu {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 4px !important;
+  align-items: center !important;
+}
+
+.header__heading-link .h2 {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 18px !important;
+  letter-spacing: 0.15em !important;
+  color: #F8F8F8 !important;
+  text-transform: uppercase !important;
+}
+
+.header-wrapper {
+  background: rgba(8, 8, 8, 0.97) !important;
+  border-bottom: 1px solid #7C3AED !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.header__icon svg,
+.header__icon path {
+  fill: #F8F8F8 !important;
+  stroke: #F8F8F8 !important;
+}
+
+.header__icon:hover svg,
+.header__icon:hover path {
+  fill: #7C3AED !important;
+  stroke: #7C3AED !important;
+}
+</style>
+
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">

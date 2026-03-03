@@ -316,7 +316,7 @@
 {{ 'futur-flare.css' | asset_url | stylesheet_tag }}
 </head>
 
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+  <body data-barba="wrapper" class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -392,5 +392,31 @@
     {%- endif -%}
     {{ 'futur-flare.js' | asset_url | script_tag }}
 {{ 'futur-flare.js' | asset_url | script_tag }}
+<script>
+// Fix "Add to Cart" button text to French
+document.addEventListener('DOMContentLoaded', function() {
+  // Replace ATC button text
+  const atcButtons = document.querySelectorAll('.product-form__submit');
+  atcButtons.forEach(btn => {
+    if (btn.textContent.includes('Add to cart') || 
+        btn.textContent.includes('ADD TO CART')) {
+      btn.textContent = '⚡ AJOUTER AU PANIER';
+    }
+  });
+
+  // Replace "Sold out" text
+  const soldOut = document.querySelectorAll('.product-form__submit[disabled]');
+  soldOut.forEach(btn => {
+    btn.textContent = 'ÉPUISÉ — PROCHAIN DROP';
+  });
+
+  // Add ff-reveal class to all major sections
+  document.querySelectorAll('.shopify-section').forEach(section => {
+    if (!section.querySelector('#ff-hero')) {
+      section.classList.add('ff-reveal');
+    }
+  });
+});
+</script>
 </body>
 </html>
