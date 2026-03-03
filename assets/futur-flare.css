@@ -1014,3 +1014,202 @@ a[href*="shopify.com/"] {
   text-transform: uppercase !important;
   letter-spacing: 0.1em !important;
 }
+
+/* ============ HERO BANNER WHITE FIX ============ */
+.banner,
+.banner__media,
+.banner__media-half,
+.banner.banner--content-align-left,
+section.banner {
+  background: #080808 !important;
+  min-height: 70vh !important;
+}
+
+.banner__media img,
+.banner__media .media {
+  opacity: 0.4 !important;
+  filter: brightness(0.4) !important;
+}
+
+.banner__box,
+.banner__content {
+  background: transparent !important;
+}
+
+.banner__heading,
+.banner .title,
+.banner h2,
+.banner h1 {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: clamp(2.5rem, 8vw, 6rem) !important;
+  font-weight: 800 !important;
+  color: #F8F8F8 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.03em !important;
+  line-height: 1.05 !important;
+  text-shadow: 0 0 40px rgba(124,58,237,0.4) !important;
+}
+
+.banner__subheading,
+.banner p,
+.banner .subtitle {
+  font-family: 'Inter', sans-serif !important;
+  color: #9CA3AF !important;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+}
+
+.banner__buttons .button--primary {
+  background: linear-gradient(135deg, #7C3AED, #06B6D4) !important;
+  border: none !important;
+  color: white !important;
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
+  border-radius: 2px !important;
+  padding: 16px 40px !important;
+  box-shadow: 0 0 20px rgba(124,58,237,0.4) !important;
+}
+
+.banner__buttons .button--secondary {
+  background: transparent !important;
+  border: 1px solid #7C3AED !important;
+  color: #7C3AED !important;
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
+  border-radius: 2px !important;
+  padding: 16px 40px !important;
+}
+
+/* ============ HIDE LOGO IMAGE — SHOW TEXT ============ */
+.header__heading-logo {
+  display: none !important;
+}
+
+.header__heading-link .h2 {
+  display: block !important;
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.2em !important;
+  color: #F8F8F8 !important;
+  text-transform: uppercase !important;
+}
+
+/* ============ HIDE AMATEUR CONTENT ============ */
+/* Hide "Toi aussi tu veux créer ta marque" section */
+.shopify-section:has(a[href="/collections/guide"]) {
+  display: none !important;
+}
+
+/* Hide "Questionnement" text block */
+.shopify-section:has(.rte p) .rte {
+  display: none !important;
+}
+
+/* ============ PRODUCT NAMES — HIDE ALIEXPRESS URLS ============ */
+.card__heading a {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: #F8F8F8 !important;
+}
+
+/* ============ PRICE STRIKETHROUGH HIDE ============ */
+.price__sale .price-item--regular,
+s.price-item--regular,
+.price del,
+.price s {
+  display: none !important;
+}
+
+.price__sale .price-item--sale {
+  color: #F8F8F8 !important;
+  font-family: 'Space Mono', monospace !important;
+  font-size: 1rem !important;
+}
+
+/* ============ ALL WHITE BACKGROUNDS OVERRIDE ============ */
+.shopify-section,
+.section,
+main#MainContent,
+#MainContent {
+  background: #080808 !important;
+}
+
+.page-width {
+  background: transparent !important;
+}
+
+/* ============ RICH TEXT SECTIONS ============ */
+.rich-text__heading {
+  font-family: 'Space Grotesk', sans-serif !important;
+  color: #F8F8F8 !important;
+  text-transform: uppercase !important;
+  font-weight: 800 !important;
+}
+
+.rich-text__text {
+  color: #9CA3AF !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* ============ FEATURED COLLECTION TITLE ============ */
+.featured-collection .title,
+.collection-list .title,
+.featured-collection h2 {
+  font-family: 'Space Grotesk', sans-serif !important;
+  color: #F8F8F8 !important;
+  text-transform: uppercase !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* ============ FOOTER FULL DARK ============ */
+.footer__content-top,
+.footer__content-bottom,
+.footer-block,
+.footer {
+  background: #080808 !important;
+  border-top: 1px solid #1f1f1f !important;
+  color: #4B5563 !important;
+}
+
+.footer-block__heading {
+  font-family: 'Space Grotesk', sans-serif !important;
+  color: #F8F8F8 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  font-size: 12px !important;
+}
+
+.footer__list a,
+.footer-block a {
+  color: #4B5563 !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  transition: color 0.2s ease !important;
+}
+
+.footer__list a:hover,
+.footer-block a:hover {
+  color: #7C3AED !important;
+}
+
+.footer__copyright {
+  color: #2d2d2d !important;
+  font-family: 'Space Mono', monospace !important;
+  font-size: 11px !important;
+}
+
+/* ============ POWERED BY SHOPIFY — HIDE ============ */
+.powered-by-link,
+.footer__copyright a[href*="shopify"] {
+  visibility: hidden !important;
+  font-size: 0 !important;
+}
