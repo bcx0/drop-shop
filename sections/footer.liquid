@@ -125,9 +125,17 @@
                       {%- if settings.brand_headline != blank -%}
                         <h2 class="footer-block__heading rte">{{ settings.brand_headline }}</h2>
                       {%- endif -%}
-                      {%- if settings.brand_description != blank -%}
-                        <div class="rte">{{ settings.brand_description }}</div>
-                      {%- endif -%}
+                      <div class="ff-footer-trust" style="
+                        font-family: 'Inter', sans-serif;
+                        font-size: 13px;
+                        color: #4B5563;
+                        line-height: 1.8;
+                        margin-bottom: 24px;
+                      ">
+                        <p style="color: #9CA3AF; font-family: 'Space Grotesk', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px; margin-bottom: 12px;">FUTUR FLARE — STREETWEAR Y2K</p>
+                        <p>Pièces sélectionnées. Stock contrôlé. Expédition sous 48h.</p>
+                        <p style="margin-top: 8px; color: #4B5563;">© 2026 Futur Flare. Tous droits réservés.</p>
+                      </div>
                       {%- if block.settings.show_social and has_social_icons -%}
                         {%- render 'social-icons', class: 'footer__list-social' -%}
                       {%- endif -%}
@@ -172,6 +180,7 @@
               {%- endif -%}
               {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                 <input type="hidden" name="contact[tags]" value="newsletter">
+                <p>Rejoins la communauté. Accès prioritaire aux drops.</p>
                 <div class="newsletter-form__field-wrapper">
                   <div class="field">
                     <input
@@ -302,7 +311,7 @@
         <small class="copyright__content"
           >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
         </small>
-        <small class="copyright__content">{{ powered_by_link }}</small>
+        <small class="copyright__content"><span style="display:none !important;">{{ powered_by_link }}</span></small>
         {%- if section.settings.show_policy -%}
           <ul class="policies list-unstyled">
             {%- for policy in shop.policies -%}
