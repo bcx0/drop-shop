@@ -1213,3 +1213,84 @@ main#MainContent,
   visibility: hidden !important;
   font-size: 0 !important;
 }
+
+/* ============ HEADER LOGO FIX ============ */
+
+/* Show the logo image properly */
+.header__heading-logo {
+  display: block !important;
+  max-width: 120px !important;
+  height: auto !important;
+  filter: brightness(0) invert(1) !important;
+}
+
+/* Fix logo text vertical alignment issue */
+.header__heading,
+.header__heading-link {
+  display: flex !important;
+  align-items: center !important;
+  writing-mode: horizontal-tb !important;
+  text-orientation: mixed !important;
+}
+
+.header__heading-link .h2 {
+  writing-mode: horizontal-tb !important;
+  text-orientation: mixed !important;
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.2em !important;
+  color: #F8F8F8 !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+}
+
+/* ============ HEADER LAYOUT FIX ============ */
+.header-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 24px !important;
+}
+
+.header {
+  display: grid !important;
+  grid-template-columns: auto 1fr auto !important;
+  align-items: center !important;
+  width: 100% !important;
+  padding: 16px 0 !important;
+  gap: 32px !important;
+}
+
+.header__inline-menu {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.header__icons {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  justify-content: flex-end !important;
+}
+
+/* ============ HERO LOGO VISIBILITY FIX ============ */
+/* The logo image on the hero is dark on dark — make it white */
+.banner .header__heading-logo,
+.section-header .header__heading-logo {
+  filter: brightness(0) invert(1) !important;
+  opacity: 1 !important;
+}
+
+/* Make the hero banner logo/image more visible */
+.banner__media img {
+  opacity: 0.25 !important;
+  filter: brightness(0.3) saturate(0.5) !important;
+}
+
+/* If logo is used as hero image, make it visible */
+.banner__media .media--contain img {
+  opacity: 0.6 !important;
+  filter: brightness(0) invert(1) !important;
+}
