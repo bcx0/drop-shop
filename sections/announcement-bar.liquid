@@ -10,7 +10,8 @@
     display: flex;
     gap: 60px;
     white-space: nowrap;
-    animation: ffScroll 25s linear infinite;
+    width: max-content;
+    animation: ffScroll 30s linear infinite;
   ">
     <span>⚡ DROP LIMITÉ — STOCKS CRITIQUES</span>
     <span>📦 Expédition sous 48h — Suivi en temps réel</span>
@@ -32,13 +33,12 @@
     color: #F8F8F8;
     text-transform: uppercase;
     letter-spacing: 0.15em;
+    padding: 0 8px;
   }
-
   @keyframes ffScroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
   }
-
   .ff-announcement-bar:hover #ff-announcement-track {
     animation-play-state: paused;
   }
@@ -48,10 +48,6 @@
 {
   "name": "FF Announcement Bar",
   "settings": [],
-  "presets": [
-    {
-      "name": "FF Announcement Bar"
-    }
-  ]
+  "presets": [{ "name": "FF Announcement Bar" }]
 }
 {% endschema %}

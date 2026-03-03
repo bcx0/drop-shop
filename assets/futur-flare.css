@@ -826,3 +826,191 @@ input[type="search"]:focus,
   border: 1px solid #7C3AED !important;
   border-radius: 8px !important;
 }
+
+/* ============ HOMEPAGE BANNER OVERRIDE ============ */
+.banner__heading,
+.banner .title,
+section.banner h2,
+.banner__box h2 {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: clamp(2rem, 8vw, 5rem) !important;
+  font-weight: 800 !important;
+  color: #F8F8F8 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  text-shadow: 0 0 30px rgba(124,58,237,0.4) !important;
+}
+
+.banner__subheading,
+.banner .subtitle,
+section.banner p {
+  font-family: 'Inter', sans-serif !important;
+  color: #9CA3AF !important;
+  font-size: 1rem !important;
+}
+
+.banner__buttons .button,
+.banner__buttons a {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
+  border-radius: 2px !important;
+  padding: 16px 32px !important;
+}
+
+.banner__buttons .button--primary {
+  background: linear-gradient(135deg, #7C3AED, #06B6D4) !important;
+  border: none !important;
+  color: white !important;
+  box-shadow: 0 0 20px rgba(124,58,237,0.4) !important;
+}
+
+.banner__buttons .button--secondary {
+  background: transparent !important;
+  border: 1px solid #7C3AED !important;
+  color: #7C3AED !important;
+}
+
+/* ============ LOGO OVERRIDE ============ */
+.header__heading-logo {
+  filter: brightness(0) invert(1) !important;
+}
+
+/* ============ COLLECTION GRID ============ */
+.collection-list__item .card {
+  background: #0f0f0f !important;
+  border: 1px solid #1f1f1f !important;
+  transition: all 0.3s ease !important;
+}
+
+.collection-list__item .card:hover {
+  border-color: #7C3AED !important;
+  box-shadow: 0 0 20px rgba(124,58,237,0.2) !important;
+}
+
+.collection-list__item .card__heading {
+  font-family: 'Space Grotesk', sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: #F8F8F8 !important;
+}
+
+/* ============ IMAGE WITH TEXT SECTION ============ */
+.image-with-text__content {
+  background: #0f0f0f !important;
+}
+
+.image-with-text__heading {
+  font-family: 'Space Grotesk', sans-serif !important;
+  color: #F8F8F8 !important;
+  text-transform: uppercase !important;
+}
+
+.image-with-text__text {
+  color: #9CA3AF !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* ============ NEWSLETTER SECTION ============ */
+.email-signup-banner {
+  background: #0f0f0f !important;
+  border-top: 1px solid #1f1f1f !important;
+  border-bottom: 1px solid #1f1f1f !important;
+}
+
+.email-signup-banner__heading {
+  font-family: 'Space Grotesk', sans-serif !important;
+  color: #F8F8F8 !important;
+  text-transform: uppercase !important;
+}
+
+.email-signup-banner input[type="email"] {
+  background: #111111 !important;
+  border: 1px solid #222222 !important;
+  color: #F8F8F8 !important;
+  border-radius: 2px 0 0 2px !important;
+}
+
+.email-signup-banner input[type="email"]:focus {
+  border-color: #7C3AED !important;
+  outline: none !important;
+}
+
+.email-signup-banner .button {
+  background: #7C3AED !important;
+  border-color: #7C3AED !important;
+  border-radius: 0 2px 2px 0 !important;
+}
+
+/* ============ HIDE GUIDE FROM CONTENT ============ */
+a[href="/collections/guide"] {
+  display: none !important;
+}
+
+/* ============ POWERED BY SHOPIFY ============ */
+.powered-by-link {
+  display: none !important;
+}
+
+a[href*="shopify.com/"] {
+  display: none !important;
+}
+
+/* ============ SECTION BACKGROUNDS ============ */
+.color-scheme-1,
+.color-background-1 {
+  background: #080808 !important;
+  color: #F8F8F8 !important;
+}
+
+.color-scheme-2,
+.color-background-2 {
+  background: #0f0f0f !important;
+  color: #F8F8F8 !important;
+}
+
+.multicolumn {
+  background: #080808 !important;
+}
+
+.multicolumn-card {
+  background: #0f0f0f !important;
+  border: 1px solid #1f1f1f !important;
+  border-radius: 4px !important;
+}
+
+.multicolumn-card__info {
+  background: transparent !important;
+}
+
+.multicolumn-card__title {
+  font-family: 'Space Grotesk', sans-serif !important;
+  color: #F8F8F8 !important;
+  text-transform: uppercase !important;
+}
+
+/* ============ CART NOTIFICATION ============ */
+.cart-notification {
+  background: #111111 !important;
+  border: 1px solid #7C3AED !important;
+  border-radius: 4px !important;
+}
+
+.cart-notification__heading {
+  font-family: 'Space Grotesk', sans-serif !important;
+  color: #F8F8F8 !important;
+  text-transform: uppercase !important;
+}
+
+.cart-notification-product__name {
+  color: #F8F8F8 !important;
+  font-family: 'Space Grotesk', sans-serif !important;
+}
+
+.cart-notification__links .button {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+}
