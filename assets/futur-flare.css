@@ -78,6 +78,7 @@ a { color: var(--text-primary) !important; }
   pointer-events: none !important;
   touch-action: none !important;
   opacity: 0.4;
+  will-change: auto;
 }
 
 @media (max-width: 1024px) {
@@ -93,6 +94,8 @@ header {
   background: rgba(8, 8, 8, 0.95) !important;
   border-bottom: 1px solid var(--accent-violet) !important;
   backdrop-filter: blur(10px) !important;
+  will-change: transform;
+  backface-visibility: hidden;
   position: sticky !important;
   top: 0 !important;
   z-index: 1000 !important;
@@ -1036,6 +1039,8 @@ section.banner {
 .banner__media .media {
   opacity: 0.4 !important;
   filter: brightness(0.4) !important;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .banner__box,

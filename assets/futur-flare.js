@@ -122,6 +122,9 @@
     const isMobile = window.innerWidth < 1024 || 'ontouchstart' in window;
 
     if (!isMobile) {
+      // Force iOS Safari to release scroll lock immediately
+      document.body.style.webkitOverflowScrolling = 'touch';
+      document.documentElement.style.overflow = 'auto';
       initParticles();
       initCursor();
     }
