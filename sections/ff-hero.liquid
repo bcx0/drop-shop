@@ -283,6 +283,37 @@
   .ff-logo-3d:hover {
     animation-play-state: paused;
   }
+
+  @media (max-width: 768px) {
+    #ff-hero {
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      padding-top: 60px !important;
+      min-height: 100vh !important;
+    }
+
+    .ff-logo-3d-wrapper {
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+      transform: none !important;
+      width: 240px !important;
+      height: 240px !important;
+      margin: 0 auto 40px auto !important;
+    }
+
+    .ff-hero__content {
+      position: relative !important;
+      margin-top: 0 !important;
+      padding: 0 24px !important;
+      width: 100% !important;
+      text-align: center !important;
+    }
+
+    #ff-hero > div:first-child {
+      display: none !important;
+    }
+  }
 </style>
 
 {% schema %}
