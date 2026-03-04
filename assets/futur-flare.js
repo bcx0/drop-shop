@@ -236,15 +236,16 @@
     initAnnouncementScroll();
     initGlitchTitles();
 
-    if (window.innerWidth >= 768) {
+    const isMobile = window.innerWidth < 768 || 'ontouchstart' in window;
+
+    if (!isMobile) {
       initParticles();
       initCursor();
-    }
-
-    if ('ontouchstart' in window) {
-      initTapGlow();
-    } else {
       initStickyATC();
+    } else {
+      initTapGlow();
+      const canvas = document.getElementById('ff-canvas');
+      if (canvas) canvas.remove();
     }
   });
 
