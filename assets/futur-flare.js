@@ -119,12 +119,9 @@
   }
 
   window.addEventListener('load', function() {
-    const isMobile = window.innerWidth < 1024 || 'ontouchstart' in window;
+    const isTouch = 'ontouchstart' in window || window.innerWidth < 1024;
 
-    if (!isMobile) {
-      // Force iOS Safari to release scroll lock immediately
-      document.body.style.webkitOverflowScrolling = 'touch';
-      document.documentElement.style.overflow = 'auto';
+    if (!isTouch) {
       initParticles();
       initCursor();
     }
@@ -134,6 +131,6 @@
     initAnnouncementScroll();
     initGlitchTitles();
     initTapGlow();
-  });
+  }, { passive: true });
 
 })();
