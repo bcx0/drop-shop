@@ -6,6 +6,8 @@
   justify-content: center;
   background: #080808;
   overflow: hidden;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 ">
 
   <!-- Ambient glow background -->
@@ -18,6 +20,7 @@
     height: 600px;
     background: radial-gradient(circle, rgba(124,58,237,0.12) 0%, rgba(6,182,212,0.05) 40%, transparent 70%);
     pointer-events: none;
+    touch-action: none;
     animation: ambientPulse 4s ease-in-out infinite;
   "></div>
 
@@ -31,6 +34,8 @@
     height: 380px;
     perspective: 800px;
     z-index: 1;
+    pointer-events: none;
+    touch-action: none;
   ">
     <div class="ff-logo-3d" style="
       width: 100%;
@@ -38,6 +43,8 @@
       position: relative;
       transform-style: preserve-3d;
       animation: rotateLogo 12s linear infinite;
+      pointer-events: none;
+      touch-action: none;
     ">
       <!-- Front face -->
       <div class="ff-logo-face ff-logo-front" style="
@@ -53,6 +60,8 @@
           0 0 40px rgba(124,58,237,0.2),
           inset 0 0 40px rgba(124,58,237,0.05);
         backface-visibility: hidden;
+        pointer-events: none;
+        touch-action: none;
       ">
         <div style="text-align: center;">
           <p style="
@@ -86,6 +95,8 @@
         border-radius: 50%;
         border: 1px solid rgba(124,58,237,0.25);
         animation: orbitRing1 8s linear infinite;
+        pointer-events: none;
+        touch-action: none;
       "></div>
 
       <!-- Orbit ring 2 -->
@@ -95,6 +106,8 @@
         border-radius: 50%;
         border: 1px solid rgba(6,182,212,0.15);
         animation: orbitRing2 14s linear infinite reverse;
+        pointer-events: none;
+        touch-action: none;
       ">
         <!-- Orbit dot -->
         <div style="
@@ -107,6 +120,8 @@
           border-radius: 50%;
           background: #06B6D4;
           box-shadow: 0 0 10px #06B6D4, 0 0 20px rgba(6,182,212,0.5);
+          pointer-events: none;
+          touch-action: none;
         "></div>
       </div>
 
@@ -117,6 +132,8 @@
         border-radius: 50%;
         border: 1px solid rgba(168,85,247,0.1);
         animation: orbitRing3 20s linear infinite;
+        pointer-events: none;
+        touch-action: none;
       ">
         <!-- Orbit dot 2 -->
         <div style="
@@ -129,6 +146,8 @@
           border-radius: 50%;
           background: #7C3AED;
           box-shadow: 0 0 8px #7C3AED, 0 0 16px rgba(124,58,237,0.5);
+          pointer-events: none;
+          touch-action: none;
         "></div>
       </div>
     </div>
@@ -228,6 +247,8 @@
     z-index: 10;
     backdrop-filter: blur(10px);
     white-space: nowrap;
+    pointer-events: none;
+    touch-action: none;
   " class="ff-glow-pulse">
     <p style="
       font-family: 'Space Mono', monospace;
