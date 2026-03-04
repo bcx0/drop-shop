@@ -7,7 +7,7 @@
 
   // ============ CUSTOM CURSOR ============
   function initCursor() {
-    if (window.innerWidth < 768) return;
+    if (window.innerWidth < 1024) return;
     
     const cursor = document.createElement('div');
     cursor.id = 'ff-cursor';
@@ -39,6 +39,8 @@
 
   // ============ PARTICLE CANVAS ============
   function initParticles() {
+    if (window.innerWidth < 768) return;
+    
     const canvas = document.createElement('canvas');
     canvas.id = 'ff-canvas';
     document.body.prepend(canvas);
@@ -55,7 +57,7 @@
     window.addEventListener('resize', resize);
 
     const COLORS = ['#7C3AED', '#06B6D4', '#A855F7', '#0891B2'];
-    const COUNT = window.innerWidth < 768 ? 40 : 80;
+    const COUNT = 60;
 
     class Particle {
       constructor() { this.reset(); }
@@ -229,14 +231,21 @@
 
   // ============ INIT ALL ============
   document.addEventListener('DOMContentLoaded', function() {
-    initParticles();
-    initCursor();
     initScrollReveal();
     initWatcherBadge();
-    initTapGlow();
-    initStickyATC();
     initAnnouncementScroll();
     initGlitchTitles();
+
+    if (window.innerWidth >= 768) {
+      initParticles();
+      initCursor();
+    }
+
+    if ('ontouchstart' in window) {
+      initTapGlow();
+    } else {
+      initStickyATC();
+    }
   });
 
 })();
