@@ -1298,12 +1298,7 @@ main#MainContent,
 @media (max-width: 768px) {
 
   /* Scroll fix - never block body scroll */
-  html {
-    overflow-x: clip !important;
-  }
-
   body {
-    overflow-x: clip !important;
     overflow-y: auto !important;
     touch-action: pan-y !important;
   }
@@ -1438,4 +1433,18 @@ main#MainContent,
     border-right: 1px solid #7C3AED !important;
   }
 
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior-y: auto !important;
+  }
+
+  html {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
 }
