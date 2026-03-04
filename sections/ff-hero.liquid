@@ -335,6 +335,32 @@
       display: none !important;
     }
   }
+
+  @media (max-width: 768px) {
+    #ff-hero * {
+      touch-action: pan-y !important;
+    }
+
+    .ff-logo-3d {
+      animation: none !important;
+      transform: rotateX(5deg) !important;
+      transform-style: flat !important;
+    }
+
+    .ff-logo-3d-wrapper {
+      perspective: none !important;
+    }
+
+    .ff-logo-3d > div[style*="animation"] {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
+
+    [style*="orbitRing"],
+    [style*="animation: orbitRing"] {
+      animation: none !important;
+    }
+  }
 </style>
 
 {% schema %}
