@@ -1294,3 +1294,60 @@ main#MainContent,
   opacity: 0.6 !important;
   filter: brightness(0) invert(1) !important;
 }
+
+/* ============ MOBILE OVERFLOW FIX ============ */
+@media (max-width: 768px) {
+
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+  }
+
+  .shopify-section,
+  main,
+  #MainContent,
+  .header-wrapper,
+  header {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Hide desktop nav on mobile */
+  .header__inline-menu {
+    display: none !important;
+  }
+
+  /* Fix hero full width on mobile */
+  #ff-hero {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow: hidden !important;
+  }
+
+  .ff-logo-3d-wrapper {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: 240px !important;
+    height: 240px !important;
+    margin: 40px auto !important;
+  }
+
+  .ff-hero__content {
+    position: relative !important;
+    margin-top: 0 !important;
+    width: 100% !important;
+    padding: 0 24px 60px 24px !important;
+  }
+
+  #ff-hero {
+    flex-direction: column !important;
+    justify-content: center !important;
+    padding-top: 20px !important;
+    align-items: center !important;
+  }
+
+}
