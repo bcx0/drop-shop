@@ -545,7 +545,7 @@ a[href="#MainContent"],
 
 .collection__description {
   color: #9CA3AF !important;
-  font-family: 'Inter', sans-serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
 }
 
 /* ============ SEARCH PAGE ============ */
@@ -562,7 +562,7 @@ input[type="search"],
   border: 1px solid #222222 !important;
   color: #F8F8F8 !important;
   border-radius: 2px !important;
-  font-family: 'Inter', sans-serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
 }
 
 input[type="search"]:focus,
@@ -644,7 +644,7 @@ input[type="search"]:focus,
   border: 1px solid #222222 !important;
   color: #F8F8F8 !important;
   border-radius: 2px !important;
-  font-family: 'Inter', sans-serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
 }
 
 .contact .field__input:focus,
@@ -656,7 +656,7 @@ input[type="search"]:focus,
 
 .contact .field__label {
   color: #9CA3AF !important;
-  font-family: 'Inter', sans-serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
 }
 
 /* ============ 404 PAGE ============ */
@@ -844,7 +844,7 @@ section.banner h2,
 .banner__subheading,
 .banner .subtitle,
 section.banner p {
-  font-family: 'Inter', sans-serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
   color: #9CA3AF !important;
   font-size: 1rem !important;
 }
@@ -909,7 +909,7 @@ section.banner p {
 
 .image-with-text__text {
   color: #9CA3AF !important;
-  font-family: 'Inter', sans-serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
 }
 
 /* ============ NEWSLETTER SECTION ============ */
@@ -1053,7 +1053,7 @@ section.banner {
 .banner__subheading,
 .banner p,
 .banner .subtitle {
-  font-family: 'Inter', sans-serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
   color: #9CA3AF !important;
   font-size: 1rem !important;
   line-height: 1.6 !important;
@@ -1156,7 +1156,7 @@ main#MainContent,
 
 .rich-text__text {
   color: #9CA3AF !important;
-  font-family: 'Inter', sans-serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
 }
 
 /* ============ FEATURED COLLECTION TITLE ============ */
@@ -1191,7 +1191,7 @@ main#MainContent,
 .footer__list a,
 .footer-block a {
   color: #4B5563 !important;
-  font-family: 'Inter', sans-serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
   font-size: 13px !important;
   transition: color 0.2s ease !important;
 }
