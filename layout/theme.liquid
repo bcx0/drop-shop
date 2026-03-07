@@ -310,7 +310,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800&family=Space+Mono:wght@400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800&family=Space+Mono:wght@400&display=swap"></noscript>
-  {{ 'futur-flare.css' | asset_url | stylesheet_tag }}
+  {% if template == 'index' %}
+    {{ 'futur-flare.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'futur-flare.js' | asset_url }}" defer></script>
+  {% endif %}
 </head>
 
   <body data-barba="wrapper" class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -387,10 +390,8 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    {{ 'futur-flare.js' | asset_url | script_tag }}
-{{ 'futur-flare.js' | asset_url | script_tag }}
-<script>
-// Fix "Add to Cart" button text to French
+  <script>
+  // Fix "Add to Cart" button text to French
 document.addEventListener('DOMContentLoaded', function() {
   // Replace ATC button text
   const atcButtons = document.querySelectorAll('.product-form__submit');
@@ -415,8 +416,5 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-{{ 'futur-flare.js' | asset_url | script_tag }}
-{{ 'futur-flare.js' | asset_url | script_tag }}
-{{ 'futur-flare.js' | asset_url | script_tag }}
 </body>
 </html>
