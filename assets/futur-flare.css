@@ -25,21 +25,21 @@
 /* ============ GLOBAL RESET ============ */
 *, *::before, *::after { box-sizing: border-box; }
 
-body {
+body.template-index {
   background: var(--bg-primary) !important;
   color: var(--text-primary) !important;
   font-family: var(--font-body) !important;
   cursor: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+body.template-index h1, body.template-index h2, body.template-index h3, body.template-index h4, body.template-index h5, body.template-index h6 {
   font-family: var(--font-heading) !important;
   color: var(--text-primary) !important;
   text-transform: uppercase !important;
   letter-spacing: 0.05em !important;
 }
 
-a { color: var(--text-primary) !important; }
+body.template-index a { color: var(--text-primary) !important; }
 
 /* ============ CUSTOM CURSOR ============ */
 #ff-cursor {
@@ -64,7 +64,7 @@ a { color: var(--text-primary) !important; }
 
 @media (max-width: 768px) {
   #ff-cursor { display: none; }
-  body { cursor: auto; }
+  body.template-index { cursor: auto; }
 }
 
 /* ============ CANVAS BACKGROUND ============ */
@@ -89,7 +89,7 @@ a { color: var(--text-primary) !important; }
 /* ============ HEADER ============ */
 .header-wrapper,
 .header,
-header {
+body.template-index header {
   background: rgba(8, 8, 8, 0.95) !important;
   border-bottom: 1px solid var(--accent-violet) !important;
   backdrop-filter: blur(10px) !important;
@@ -202,8 +202,8 @@ header {
 }
 
 /* ============ PRODUCT TITLES & PRICES ============ */
-.card__heading a,
-.card__heading {
+body.template-index .card__heading a,
+body.template-index .card__heading {
   font-family: var(--font-heading) !important;
   color: var(--text-primary) !important;
   text-transform: uppercase !important;
@@ -218,10 +218,10 @@ header {
 }
 
 /* ============ BUTTONS ============ */
-.button,
-.btn,
-button[type="submit"],
-.product-form__submit {
+body.template-index .button,
+body.template-index .btn,
+body.template-index button[type="submit"],
+body.template-index .product-form__submit {
   background: var(--accent-violet) !important;
   color: white !important;
   border: none !important;
@@ -236,8 +236,8 @@ button[type="submit"],
   overflow: hidden !important;
 }
 
-.button::before,
-.product-form__submit::before {
+body.template-index .button::before,
+body.template-index .product-form__submit::before {
   content: '';
   position: absolute;
   top: 0;
@@ -248,27 +248,27 @@ button[type="submit"],
   transition: left 0.4s ease;
 }
 
-.button:hover::before,
-.product-form__submit:hover::before {
+body.template-index .button:hover::before,
+body.template-index .product-form__submit:hover::before {
   left: 100%;
 }
 
-.button:hover,
-.product-form__submit:hover {
+body.template-index .button:hover,
+body.template-index .product-form__submit:hover {
   box-shadow: 0 0 30px var(--accent-violet-glow), 0 0 60px rgba(124,58,237,0.2) !important;
   transform: translateY(-2px) !important;
 }
 
 /* ============ FOOTER ============ */
 .footer,
-footer {
+body.template-index footer {
   background: var(--bg-primary) !important;
   border-top: 1px solid var(--border) !important;
   color: var(--text-muted) !important;
 }
 
-.footer a { color: var(--text-muted) !important; }
-.footer a:hover { color: var(--accent-cyan) !important; }
+body.template-index .footer a { color: var(--text-muted) !important; }
+body.template-index .footer a:hover { color: var(--accent-cyan) !important; }
 
 .powered-by-link,
 [href*="shopify.com"] { display: none !important; }
@@ -387,9 +387,9 @@ footer {
 }
 
 /* ============ COLLECTION/MAIN BACKGROUND ============ */
-.collection, 
-main,
-.main-page-content {
+body.template-index .collection, 
+body.template-index main,
+body.template-index .main-page-content {
   background: var(--bg-primary) !important;
 }
 
@@ -405,7 +405,7 @@ main,
 }
 /* ============ HIDE ACCESSIBILITY SKIP LINK ============ */
 .skip-to-content-link,
-a[href="#MainContent"],
+body.template-index a[href="#MainContent"],
 .visually-hidden.focusable {
   display: none !important;
 }
@@ -443,7 +443,7 @@ a[href="#MainContent"],
   gap: 8px !important;
 }
 
-.header__menu-item span {
+body.template-index .header__menu-item span {
   font-size: 12px !important;
   letter-spacing: 0.08em !important;
   white-space: nowrap !important;
@@ -461,7 +461,7 @@ a[href="#MainContent"],
 }
 
 /* ============ ADD TO CART BUTTON ============ */
-.product-form__submit {
+body.template-index .product-form__submit {
   background: linear-gradient(135deg, #7C3AED, #06B6D4) !important;
   color: white !important;
   font-family: 'Space Grotesk', sans-serif !important;
@@ -478,7 +478,7 @@ a[href="#MainContent"],
   overflow: hidden !important;
 }
 
-.product-form__submit:hover {
+body.template-index .product-form__submit:hover {
   box-shadow: 
     0 0 30px rgba(124, 58, 237, 0.6),
     0 0 60px rgba(6, 182, 212, 0.3) !important;
@@ -511,8 +511,8 @@ a[href="#MainContent"],
 }
 
 /* ============ VARIANT BUTTONS ============ */
-.swatch-input__input + label,
-.swatch__input + .swatch__label {
+body.template-index .swatch-input__input + label,
+body.template-index .swatch__input + .swatch__label {
   background: var(--bg-elevated) !important;
   border: 1px solid var(--border) !important;
   color: var(--text-primary) !important;
@@ -520,8 +520,8 @@ a[href="#MainContent"],
   transition: all 0.2s ease !important;
 }
 
-.swatch-input__input:checked + label,
-.swatch-input--active {
+body.template-index .swatch-input__input:checked + label,
+body.template-index .swatch-input--active {
   border-color: var(--accent-violet) !important;
   box-shadow: 0 0 10px var(--accent-violet-glow) !important;
   color: var(--accent-violet) !important;
@@ -565,8 +565,8 @@ a[href="#MainContent"],
   text-transform: uppercase !important;
 }
 
-input[type="search"],
-.search__input {
+body.template-index input[type="search"],
+body.template-index .search__input {
   background: #111111 !important;
   border: 1px solid #222222 !important;
   color: #F8F8F8 !important;
@@ -574,8 +574,8 @@ input[type="search"],
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
 }
 
-input[type="search"]:focus,
-.search__input:focus {
+body.template-index input[type="search"]:focus,
+body.template-index .search__input:focus {
   border-color: #7C3AED !important;
   box-shadow: 0 0 10px rgba(124, 58, 237, 0.3) !important;
   outline: none !important;
@@ -646,9 +646,9 @@ input[type="search"]:focus,
   font-weight: 800 !important;
 }
 
-.contact .field__input,
-.contact textarea,
-.contact input {
+body.template-index .contact .field__input,
+body.template-index .contact textarea,
+body.template-index .contact input {
   background: #111111 !important;
   border: 1px solid #222222 !important;
   color: #F8F8F8 !important;
@@ -656,8 +656,8 @@ input[type="search"]:focus,
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
 }
 
-.contact .field__input:focus,
-.contact textarea:focus {
+body.template-index .contact .field__input:focus,
+body.template-index .contact textarea:focus {
   border-color: #7C3AED !important;
   box-shadow: 0 0 10px rgba(124, 58, 237, 0.3) !important;
   outline: none !important;
@@ -669,7 +669,7 @@ input[type="search"]:focus,
 }
 
 /* ============ 404 PAGE ============ */
-.template-404 main {
+body.template-index .template-404 main {
   background: #080808 !important;
   text-align: center !important;
   padding: 80px 20px !important;
@@ -738,7 +738,7 @@ input[type="search"]:focus,
 }
 
 .menu-drawer__navigation a,
-.header__drawer a {
+body.template-index .header__drawer a {
   color: #F8F8F8 !important;
   font-family: 'Space Grotesk', sans-serif !important;
   text-transform: uppercase !important;
@@ -748,7 +748,7 @@ input[type="search"]:focus,
   padding: 16px 0 !important;
 }
 
-.menu-drawer__navigation a:hover {
+body.template-index .menu-drawer__navigation a:hover {
   color: #7C3AED !important;
   text-shadow: 0 0 10px rgba(124, 58, 237, 0.5) !important;
 }
@@ -818,13 +818,13 @@ input[type="search"]:focus,
   border-radius: 4px !important;
 }
 
-.thumbnail-list__item button {
+body.template-index .thumbnail-list__item button {
   border: 1px solid #222222 !important;
   border-radius: 2px !important;
 }
 
-.thumbnail-list__item button.is-active,
-.thumbnail-list__item button:hover {
+body.template-index .thumbnail-list__item button.is-active,
+body.template-index .thumbnail-list__item button:hover {
   border-color: #7C3AED !important;
   box-shadow: 0 0 8px rgba(124, 58, 237, 0.4) !important;
 }
@@ -839,8 +839,8 @@ input[type="search"]:focus,
 /* ============ HOMEPAGE BANNER OVERRIDE ============ */
 .banner__heading,
 .banner .title,
-section.banner h2,
-.banner__box h2 {
+body.template-index section.banner h2,
+body.template-index .banner__box h2 {
   font-family: 'Space Grotesk', sans-serif !important;
   font-size: clamp(2rem, 8vw, 5rem) !important;
   font-weight: 800 !important;
@@ -852,14 +852,14 @@ section.banner h2,
 
 .banner__subheading,
 .banner .subtitle,
-section.banner p {
+body.template-index section.banner p {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
   color: #9CA3AF !important;
   font-size: 1rem !important;
 }
 
-.banner__buttons .button,
-.banner__buttons a {
+body.template-index .banner__buttons .button,
+body.template-index .banner__buttons a {
   font-family: 'Space Grotesk', sans-serif !important;
   font-weight: 800 !important;
   text-transform: uppercase !important;
@@ -934,26 +934,26 @@ section.banner p {
   text-transform: uppercase !important;
 }
 
-.email-signup-banner input[type="email"] {
+body.template-index .email-signup-banner input[type="email"] {
   background: #111111 !important;
   border: 1px solid #222222 !important;
   color: #F8F8F8 !important;
   border-radius: 2px 0 0 2px !important;
 }
 
-.email-signup-banner input[type="email"]:focus {
+body.template-index .email-signup-banner input[type="email"]:focus {
   border-color: #7C3AED !important;
   outline: none !important;
 }
 
-.email-signup-banner .button {
+body.template-index .email-signup-banner .button {
   background: #7C3AED !important;
   border-color: #7C3AED !important;
   border-radius: 0 2px 2px 0 !important;
 }
 
 /* ============ HIDE GUIDE FROM CONTENT ============ */
-a[href="/collections/guide"] {
+body.template-index a[href="/collections/guide"] {
   display: none !important;
 }
 
@@ -962,7 +962,7 @@ a[href="/collections/guide"] {
   display: none !important;
 }
 
-a[href*="shopify.com/"] {
+body.template-index a[href*="shopify.com/"] {
   display: none !important;
 }
 
@@ -1017,7 +1017,7 @@ a[href*="shopify.com/"] {
   font-family: 'Space Grotesk', sans-serif !important;
 }
 
-.cart-notification__links .button {
+body.template-index .cart-notification__links .button {
   font-family: 'Space Grotesk', sans-serif !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
@@ -1049,8 +1049,8 @@ section.banner {
 
 .banner__heading,
 .banner .title,
-.banner h2,
-.banner h1 {
+body.template-index .banner h2,
+body.template-index .banner h1 {
   font-family: 'Space Grotesk', sans-serif !important;
   font-size: clamp(2.5rem, 8vw, 6rem) !important;
   font-weight: 800 !important;
@@ -1062,7 +1062,7 @@ section.banner {
 }
 
 .banner__subheading,
-.banner p,
+body.template-index .banner p,
 .banner .subtitle {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
   color: #9CA3AF !important;
@@ -1112,17 +1112,17 @@ section.banner {
 
 /* ============ HIDE AMATEUR CONTENT ============ */
 /* Hide "Toi aussi tu veux créer ta marque" section */
-.shopify-section:has(a[href="/collections/guide"]) {
+body.template-index .shopify-section:has(a[href="/collections/guide"]) {
   display: none !important;
 }
 
 /* Hide "Questionnement" text block */
-.shopify-section:has(.rte p) .rte {
+body.template-index .shopify-section:has(.rte p) .rte {
   display: none !important;
 }
 
 /* ============ PRODUCT NAMES — HIDE ALIEXPRESS URLS ============ */
-.card__heading a {
+body.template-index .card__heading a {
   font-family: 'Space Grotesk', sans-serif !important;
   font-size: 13px !important;
   font-weight: 700 !important;
@@ -1132,14 +1132,14 @@ section.banner {
 }
 
 /* ============ PRICE STRIKETHROUGH HIDE ============ */
-.price__sale .price-item--regular,
-s.price-item--regular,
-.price del,
-.price s {
+body.template-index .price__sale .price-item--regular,
+body.template-index s.price-item--regular,
+body.template-index .price del,
+body.template-index .price s {
   display: none !important;
 }
 
-.price__sale .price-item--sale {
+body.template-index .price__sale .price-item--sale {
   color: #F8F8F8 !important;
   font-family: 'Space Mono', monospace !important;
   font-size: 1rem !important;
@@ -1148,12 +1148,12 @@ s.price-item--regular,
 /* ============ ALL WHITE BACKGROUNDS OVERRIDE ============ */
 .shopify-section,
 .section,
-main#MainContent,
-#MainContent {
+body.template-index main#MainContent,
+body.template-index #MainContent {
   background: #080808 !important;
 }
 
-.page-width {
+body.template-index .page-width {
   background: transparent !important;
 }
 
@@ -1173,7 +1173,7 @@ main#MainContent,
 /* ============ FEATURED COLLECTION TITLE ============ */
 .featured-collection .title,
 .collection-list .title,
-.featured-collection h2 {
+body.template-index .featured-collection h2 {
   font-family: 'Space Grotesk', sans-serif !important;
   color: #F8F8F8 !important;
   text-transform: uppercase !important;
@@ -1199,16 +1199,16 @@ main#MainContent,
   font-size: 12px !important;
 }
 
-.footer__list a,
-.footer-block a {
+body.template-index .footer__list a,
+body.template-index .footer-block a {
   color: #4B5563 !important;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
   font-size: 13px !important;
   transition: color 0.2s ease !important;
 }
 
-.footer__list a:hover,
-.footer-block a:hover {
+body.template-index .footer__list a:hover,
+body.template-index .footer-block a:hover {
   color: #7C3AED !important;
 }
 
@@ -1219,8 +1219,8 @@ main#MainContent,
 }
 
 /* ============ POWERED BY SHOPIFY — HIDE ============ */
-.powered-by-link,
-.footer__copyright a[href*="shopify"] {
+body.template-index .powered-by-link,
+body.template-index .footer__copyright a[href*="shopify"] {
   visibility: hidden !important;
   font-size: 0 !important;
 }
@@ -1309,7 +1309,7 @@ main#MainContent,
 @media (max-width: 768px) {
 
   /* Scroll fix - never block body scroll */
-  body {
+  body.template-index {
   }
 
   /* Hero mobile - stack vertically, no position absolute */
@@ -1375,7 +1375,7 @@ main#MainContent,
     pointer-events: none !important;
   }
 
-  header,
+  body.template-index header,
   .header-wrapper {
     z-index: 1000 !important;
     position: relative !important;
